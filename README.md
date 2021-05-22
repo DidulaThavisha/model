@@ -57,11 +57,11 @@ from transformers import pipeline
 tokenizer = AutoTokenizer.from_pretrained("philschmid/distilroberta-base-ner-conll2003")
 model = AutoModelForTokenClassification.from_pretrained("philschmid/distilroberta-base-ner-conll2003")
 
-nlp = pipeline("ner", model=model, tokenizer=tokenizer,grouped_entities=True)
-example = "My name is Philipp, I am a Machine Learning Engineer at HuggingFace and live in Nuremberg"
+nlp = pipeline("ner", model=model, tokenizer=tokenizer, grouped_entities=True)
+example = "My name is Philipp and live in Germany"
 
-ner_results = nlp(example)
-print(ner_results)
+nlp(example)
+
 ```
 
 

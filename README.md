@@ -41,11 +41,11 @@ should probably proofread and complete it, then remove this comment. -->
 
 This model is a fine-tuned version of [distilroberta-base](https://huggingface.co/distilroberta-base) on the conll2003 dataset.
 
-eval F1-Score: 95,29 (CoNLL-03)
-test F1-Score: 90,74 (CoNLL-03)
+eval F1-Score: **95,29** (CoNLL-03)   
+test F1-Score: **90,74** (CoNLL-03)  
 
-eval F1-Score: 95,29 (CoNLL++ / CoNLL-03 corrected)
-test F1-Score: 92,23 (CoNLL++ / CoNLL-03 corrected)
+eval F1-Score: **95,29** (CoNLL++ / CoNLL-03 corrected)  
+test F1-Score: **92,23** (CoNLL++ / CoNLL-03 corrected)  
 
 
 ## Model Usage

@@ -40,24 +40,30 @@ should probably proofread and complete it, then remove this comment. -->
 # distilroberta-base-ner-conll2003
 
 This model is a fine-tuned version of [distilroberta-base](https://huggingface.co/distilroberta-base) on the conll2003 dataset.
-It achieves the following results on the evaluation set:
-- Loss: 0.0583
-- Precision: 0.9493
-- Recall: 0.9566
-- F1: 0.9529
-- Accuracy: 0.9883
 
-## Model description
+eval F1-Score: 95,29 (CoNLL-03)
+test F1-Score: 90,74 (CoNLL-03)
 
-More information needed
+eval F1-Score: 95,29 (CoNLL++ / CoNLL-03 corrected)
+test F1-Score: 92,23 (CoNLL++ / CoNLL-03 corrected)
 
-## Intended uses & limitations
 
-More information needed
+## Model Usage
 
-## Training and evaluation data
+```python
+from transformers import AutoTokenizer, AutoModelForTokenClassification
+from transformers import pipeline
 
-More information needed
+tokenizer = AutoTokenizer.from_pretrained("philschmid/distilroberta-base-ner-conll2003")
+model = AutoModelForTokenClassification.from_pretrained("philschmid/distilroberta-base-ner-conll2003")
+
+nlp = pipeline("ner", model=model, tokenizer=tokenizer,grouped_entities=True)
+example = "My name is Philipp, I am a Machine Learning Engineer at HuggingFace and live in Nuremberg"
+
+ner_results = nlp(example)
+print(ner_results)
+```
+
 
 ## Training procedure
 
@@ -75,6 +81,37 @@ The following hyperparameters were used during training:
 
 ### Training results
 
+#### CoNNL2003
+
+It achieves the following results on the evaluation set:
+- Loss: 0.0583
+- Precision: 0.9493
+- Recall: 0.9566
+- F1: 0.9529
+- Accuracy: 0.9883
+
+It achieves the following results on the test set:
+- Loss: 0.2025
+- Precision: 0.8999
+- Recall: 0.915
+- F1: 0.9074
+- Accuracy: 0.9741
+
+#### CoNNL++ / CoNLL2003 corrected
+
+It achieves the following results on the evaluation set:
+- Loss: 0.0567
+- Precision: 0.9493
+- Recall: 0.9566
+- F1: 0.9529
+- Accuracy: 0.9883
+
+It achieves the following results on the test set:
+- Loss: 0.1359
+- Precision: 0.92
+- Recall: 0.9245
+- F1: 0.9223
+- Accuracy: 0.9785
 
 
 ### Framework versions

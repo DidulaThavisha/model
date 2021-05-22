@@ -20,7 +20,7 @@
     "5": "B-LOC",
     "6": "I-LOC",
     "7": "B-MISC",
-    "8": "I-MISC",
+    "8": "I-MISC"
   },
   "initializer_range": 0.02,
   "intermediate_size": 3072,
@@ -33,7 +33,7 @@
     "B-LOC": 5,
     "I-LOC": 6,
     "B-MISC": 7,
-    "I-MISC": 8,
+    "I-MISC": 8
   },
   "layer_norm_eps": 1e-05,
   "max_position_embeddings": 514,

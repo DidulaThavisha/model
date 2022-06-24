@@ -9,7 +9,6 @@ metrics:
 - recall
 - f1
 - accuracy
-
 model-index:
 - name: distilroberta-base-ner-conll2003
   results:
@@ -20,18 +19,47 @@ model-index:
       name: conll2003
       type: conll2003
     metrics:
-      - name: Precision
-        type: precision
-        value: 0.9492923423001218
-      - name: Recall
-        type: recall
-        value: 0.9565545901020023
-      - name: F1
-        type: f1
-        value: 0.9529096297690173
-      - name: Accuracy
-        type: accuracy
-        value: 0.9883096560400111
+    - name: Precision
+      type: precision
+      value: 0.9492923423001218
+    - name: Recall
+      type: recall
+      value: 0.9565545901020023
+    - name: F1
+      type: f1
+      value: 0.9529096297690173
+    - name: Accuracy
+      type: accuracy
+      value: 0.9883096560400111
+  - task:
+      type: token-classification
+      name: Token Classification
+    dataset:
+      name: conll2003
+      type: conll2003
+      config: conll2003
+      split: validation
+    metrics:
+    - name: Accuracy
+      type: accuracy
+      value: 0.9883249976987512
+      verified: true
+    - name: Precision
+      type: precision
+      value: 0.9906910190038265
+      verified: true
+    - name: Recall
+      type: recall
+      value: 0.9916635820847483
+      verified: true
+    - name: F1
+      type: f1
+      value: 0.9911770619696786
+      verified: true
+    - name: loss
+      type: loss
+      value: 0.05638007074594498
+      verified: true
 ---
 
 <!-- This model card has been generated automatically according to the information the Trainer had access to. You

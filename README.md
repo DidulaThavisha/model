@@ -13,24 +13,24 @@ model-index:
 - name: distilroberta-base-ner-conll2003
   results:
   - task:
-      name: Token Classification
       type: token-classification
+      name: Token Classification
     dataset:
       name: conll2003
       type: conll2003
     metrics:
-    - name: Precision
-      type: precision
+    - type: precision
       value: 0.9492923423001218
-    - name: Recall
-      type: recall
+      name: Precision
+    - type: recall
       value: 0.9565545901020023
-    - name: F1
-      type: f1
+      name: Recall
+    - type: f1
       value: 0.9529096297690173
-    - name: Accuracy
-      type: accuracy
+      name: F1
+    - type: accuracy
       value: 0.9883096560400111
+      name: Accuracy
   - task:
       type: token-classification
       name: Token Classification
@@ -40,26 +40,31 @@ model-index:
       config: conll2003
       split: validation
     metrics:
-    - name: Accuracy
-      type: accuracy
+    - type: accuracy
       value: 0.9883249976987512
+      name: Accuracy
       verified: true
-    - name: Precision
-      type: precision
+      verifyToken: eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJoYXNoIjoiZTEwNzFlMjk0ZDY4NTg2MGQxMDZkM2IyZjdjNDEwYmNiMWY1MWZiNzg1ZjMyZTlkYzQ0MmVmNTZkMjEyMGQ1YiIsInZlcnNpb24iOjF9.zxapWje7kbauQ5-VDNbY487JB5wkN4XqgaLwoX1cSmNfgpp-MPCjqrocxayb1kImbN8CvzOpU1aSfvRfyd5fAw
+    - type: precision
       value: 0.9906910190038265
+      name: Precision
       verified: true
-    - name: Recall
-      type: recall
+      verifyToken: eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJoYXNoIjoiMWRjMjYyOGQ2MGMwOGE1ODQyNDU1MzZiNWU4MGUzYWVlNjQ3NDhjZDRlZTE0NDlmMGJjZjliZjU2ZmFiZmZiYyIsInZlcnNpb24iOjF9.G_QY9mDkIkllmWPsgmUoVgs-R9XjfYkdJMS8hcyGM-7NXsbigUgZZnhfD0TjDak62UoEplqwSX5r0S4xKPdxBQ
+    - type: recall
       value: 0.9916635820847483
+      name: Recall
       verified: true
-    - name: F1
-      type: f1
+      verifyToken: eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJoYXNoIjoiODE0MDE5ZWMzNTM5MTA1NTI4YzNhNzI2NzVjODIzZWY0OWE2ODJiN2FiNmVkNGVkMTI2ODZiOGEwNTEzNzk2MCIsInZlcnNpb24iOjF9.zenVqRfs8TrKoiIu_QXQJtHyj3dEH97ZDLxUn_UJ2tdW36hpBflgKCJNBvFFkra7bS4cNRfIkwxxCUMWH1ptBg
+    - type: f1
       value: 0.9911770619696786
+      name: F1
       verified: true
-    - name: loss
-      type: loss
+      verifyToken: eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJoYXNoIjoiZWZjY2NiNjZlNDFiODQ3M2JkOWJjNzRlY2FmNjMwNGFkNzFmNTBkOGQ5YTcyZjUzNjAwNDAxMThiNTE5ZThiNiIsInZlcnNpb24iOjF9.c9aD9hycCS-WBaLUb8NKzIpd2LE6xfJrhg3fL9_832RiMq5gcMs9qtarP3Jbo6WbPs_WThr_v4gn7K4Ti-0-CA
+    - type: loss
       value: 0.05638007074594498
+      name: loss
       verified: true
+      verifyToken: eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJoYXNoIjoiNGM3NTQ5ODBhMDcyNjBjMGUxMDgzYjI2NjEwNjM0MjU0MjEzMTRmODA2MjMwZWU1YTQ3OWU2YjUzNTliZTkwMSIsInZlcnNpb24iOjF9.03OwbxrdKm-vg6ia5CBYdEaSCuRbT0pLoEvwpd4NtjydVzo5wzS-pWgY6vH4PlI0ZCTBY0Po0IZSsJulWJttDg
 ---
 
 <!-- This model card has been generated automatically according to the information the Trainer had access to. You
